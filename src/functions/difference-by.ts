@@ -2,7 +2,7 @@ export function differenceBy(
   arr: any[],
   valuesToExclude: any[],
   modifier: ((val: any) => any) | string,
-) {
+): any[] {
   let finalModifier;
 
   if (typeof modifier === 'string') {
