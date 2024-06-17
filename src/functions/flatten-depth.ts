@@ -8,7 +8,7 @@ export function flattenDepth(
 
   if (Array.isArray(arr[0])) {
     return [
-      ...(depth > 1 ? flattenDepth(arr[0], depth - 1) : arr[0]),
+      ...((depth - 1) > 1 ? flattenDepth(arr[0], depth - 1) : arr[0]),
       ...rest
     ]
   }
