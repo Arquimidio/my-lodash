@@ -4,8 +4,17 @@ export function flattenDepth(
 ): any[] {
   if (!arr?.length) return [];
 
-  return [
-    ...(Array.isArray(arr[0]) ? depth > 1 ? flattenDepth(arr[0], depth - 1) : arr[0] : [arr[0]]),
-    ...flattenDepth(arr.slice(1), depth)
-  ]
+  const rest = flattenDepth(arr.slice(1), depth);
+
+  if (Array.isArray(arr[0])) {
+    return [
+      ...(depth > 1 ? flattenDepth(arr[0], depth - 1) : arr[0]),
+      ...rest
+    ]
+  }
+
+  return ([
+    arr[0],
+    ...rest
+  ])
 }
