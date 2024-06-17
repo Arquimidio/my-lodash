@@ -1,0 +1,18 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "vite-tsconfig-paths": "^4.3.2",
+    "tsc": "^2.0.4",
+    "vitest": "^1.6.0"
+  },
+  "name": "my-lodash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
