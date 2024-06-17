@@ -3,8 +3,17 @@ export function flatten(
 ): any[] {
   if (!arr.length) return [];
 
+  const rest = flatten(arr.slice(1));
+
+  if (Array.isArray(arr[0])) {
+    return [
+      ...arr[0],
+      ...rest
+    ]
+  }
+
   return [
-    ...(Array.isArray(arr[0]) ? arr[0] : [arr[0]]),
-    ...flatten(arr.slice(1))
+    arr[0],
+    ...rest
   ]
 }
