@@ -1,6 +1,6 @@
-export function pull<T>(
+export function pullAll<T>(
   arr: T[],
-  ...args: T[]
+  args: T[]
 ): T[] {
   for (let i = 0; i < arr.length;) {
     if (args.includes(arr[i])) {
